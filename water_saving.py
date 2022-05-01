@@ -11,6 +11,11 @@ data = pd.read_csv("water_saving_chart.csv")
 st.set_page_config(page_title="エコアクア：節水測定",
                    page_icon=":potable_water:", layout="wide")
 
+# 画像読み込み
+thumbnail1 = Image.open("images/thumbnail1.jpg")
+blue = Image.open("images/blue.gif")
+green = Image.open("images/green.gif")
+setting1 = Image.open("images/setting.gif")
 
 # Use local CSS
 
@@ -46,15 +51,22 @@ str_average_rating = str(round(df_selection["saving_rate"].sum()*100, 0))
 tree = ":deciduous_tree:" * int(round(average_rating, 0))
 price = "{:,}".format(round(water_charges * average_rating))
 
-st.write("""上記に記入いただいた箇所以外にお手洗い、洗濯機等を利用いただいているかと思います為、
-その量によって、節水金額は異なります。""")
+st.write("""記入いただいた箇所以外にお手洗い、洗濯機等を利用いただいているかと思います為、
+その使用量によって、節水金額は異なります。""")
 
 latest_iteration = st.empty()
 bar = st.progress(0)
 for i in range(100):
     latest_iteration.text(f'節水率計算中：{i+1}%')
     bar.progress(i+1)
-    time.sleep(0.02)
+    time.sleep(0.01)
+
+with st.container():
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.subheader("使用箇所："+num_faucet + "箇所")
+    with right_column:
+        st.subheader("現在の金額：" + water_charges + "円")
 
 
 with st.container():
@@ -65,4 +77,3 @@ with st.container():
     with right_column:
         st.subheader("節水金額：")
         st.subheader(f"{price} 円")
-
