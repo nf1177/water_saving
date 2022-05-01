@@ -43,7 +43,7 @@ str_average_rating = str(round(df_selection["saving_rate"].sum()*100, 0))
 tree = ":deciduous_tree:" * int(round(average_rating, 0))
 price = "{:,}".format(round(water_charges * average_rating))
 
-st.write("エコアクア：ATOM節水効果試算")
+st.header("エコアクア：ATOM節水効果試算")
 
 st.write("""記入いただいた箇所以外にお手洗い、洗濯機等を利用いただいているかと思います為、
 その使用量によって、節水金額は異なります。""")
