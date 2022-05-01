@@ -66,11 +66,3 @@ with st.container():
         st.subheader("節水金額：")
         st.subheader(f"{price} 円")
 
-# ---- 流水制御機構 ----
-    st.write("---")
-with st.container():
-    st.title("流水制御機構")
-    st.write("###")
-    st.write(
-        "エコアクアの流水制御機構の内部です。"
-    )
