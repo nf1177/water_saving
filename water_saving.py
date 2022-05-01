@@ -46,7 +46,7 @@ price = "{:,}".format(round(water_charges * average_rating))
 st.header("エコアクア：ATOM節水効果試算")
 
 st.write("""記入いただいた箇所以外にお手洗い、洗濯機等を利用いただいている場合、
-その使用量によって、節水金額は異なります。詳細な節水効果の測定については株式会社エコアクアまでご連絡ください。""")
+その使用量によって、節水金額は異なります。詳細な節水効果の測定をご希望の場合は株式会社エコアクアまでご連絡ください。""")
 
 latest_iteration = st.empty()
 bar = st.progress(0)
