@@ -74,5 +74,3 @@ with st.container():
     st.write(
         "エコアクアの流水制御機構の内部です。"
     )
-    st.image(thumbnail1)
-    st.write("[Learn More >](https://youtu.be/RaZ3gRDVPm4)")
