@@ -16,6 +16,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+
 local_css("style/style.css")
 
 # ---- スライドバー ----
@@ -55,10 +56,9 @@ for i in range(100):
 with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
-        st.subheader("使用箇所："+num_faucet + "箇所")
+        st.subheader(f"使用箇所：{num_faucet} 箇所")
     with right_column:
-        st.subheader("現在の金額：" + water_charges + "円")
-
+        st.subheader(f"現在の金額：{water_charges}円")
 
 with st.container():
     left_column, right_column = st.columns(2)
