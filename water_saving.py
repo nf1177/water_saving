@@ -56,13 +56,6 @@ for i in range(100):
 with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
-        st.subheader(f"使用箇所：{num_faucet} 箇所")
-    with right_column:
-        st.subheader(f"現在の金額：{water_charges}円")
-
-with st.container():
-    left_column, right_column = st.columns(2)
-    with left_column:
         st.subheader("節水率：")
         st.subheader(f"{str_average_rating}%")
     with right_column:
