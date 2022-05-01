@@ -11,19 +11,10 @@ data = pd.read_csv("water_saving_chart.csv")
 st.set_page_config(page_title="エコアクア：節水測定",
                    page_icon=":potable_water:", layout="wide")
 
-# 画像読み込み
-thumbnail1 = Image.open("images/thumbnail1.jpg")
-blue = Image.open("images/blue.gif")
-green = Image.open("images/green.gif")
-setting1 = Image.open("images/setting.gif")
-
 # Use local CSS
-
-
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
 
 local_css("style/style.css")
 
