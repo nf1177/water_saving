@@ -12,7 +12,7 @@ st.set_page_config(page_title="エコアクア：節水測定",
                    page_icon=":potable_water:", layout="wide")
 
 # 画像読み込み
-thumbnail1 = Image.open("images/water_compare.png")
+thumbnail1 = Image.open("water_compare.png")
 blue = Image.open("images/blue.gif")
 green = Image.open("images/green.gif")
 setting1 = Image.open("images/setting.gif")
@@ -77,7 +77,7 @@ with st.container():
     st.title("流水制御機構")
     st.write("###")
     st.write(
-        "エコアクアの流水制御機構の比較同化です"
+        "エコアクアの流水制御機構の比較動画です"
     )
     st.image(thumbnail1)
     st.write("[Youtubeを見る >](https://www.youtube.com/watch?v=zifPZFwA1Hs)")
