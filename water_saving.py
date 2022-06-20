@@ -74,5 +74,8 @@ with st.container():
     st.write(
         "エコアクアの流水制御機構の比較動画です"
     )
-    st.image(thumbnail1)
-    st.write("[Youtubeを見る >](https://www.youtube.com/watch?v=zifPZFwA1Hs)")
+    st.write("エコアクアの流水制御機構の比較動画です")
+    url = 'https://www.youtube.com/watch?v=zifPZFwA1Hs'
+    st.video(url)
+
+st.write("[SaaSを見る >](https://share.streamlit.io/nf1177/saas/main/app.py)")
