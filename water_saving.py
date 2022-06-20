@@ -12,9 +12,14 @@ st.set_page_config(page_title="エコアクア：節水測定",
                    page_icon=":potable_water:", layout="wide")
 
 # 画像読み込み
-thumbnail1 = Image.open("water_compare.png")
+thumbnail1 = Image.open("images/water_compare.png")
+blue = Image.open("images/blue.gif")
+green = Image.open("images/green.gif")
+setting1 = Image.open("images/setting.gif")
 
 # Use local CSS
+
+
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -48,13 +53,15 @@ price = "{:,}".format(round(water_charges * average_rating))
 
 st.write("""上記に記入いただいた箇所以外にお手洗い、洗濯機等を利用いただいているかと思います為、
 その量によって、節水金額は異なります。""")
-
-latest_iteration = st.empty()
-bar = st.progress(0)
-for i in range(100):
-    latest_iteration.text(f'節水率計算中：{i+1}%')
-    bar.progress(i+1)
-    time.sleep(0.02)
+with st.container():
+    left_column, right_column = st.columns(2)
+    with left_column:
+        latest_iteration = st.empty()
+        bar = st.progress(0)
+        for i in range(100):
+            latest_iteration.text(f'節水率計算中：{i+1}%')
+            bar.progress(i+1)
+            time.sleep(0.02)
 
 
 with st.container():
@@ -69,13 +76,13 @@ with st.container():
 # ---- 流水制御機構 ----
     st.write("---")
 with st.container():
-    st.title("流水制御機構")
-    st.write("###")
-    st.write(
-        "エコアクアの流水制御機構の比較動画です"
-    )
-    st.write("エコアクアの流水制御機構の比較動画です")
-    url = 'https://www.youtube.com/watch?v=zifPZFwA1Hs'
-    st.video(url)
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.title("流水制御機構")
+        st.write("###")
+        st.write("エコアクアの流水制御機構の比較動画です")
+        url = 'https://www.youtube.com/watch?v=zifPZFwA1Hs'
+        st.video(url)
+
 
 st.write("[SaaSを見る >](https://share.streamlit.io/nf1177/saas/main/app.py)")
