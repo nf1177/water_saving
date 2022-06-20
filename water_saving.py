@@ -82,8 +82,6 @@ with st.container():
         url = 'https://www.youtube.com/watch?v=zifPZFwA1Hs'
         st.video(url)
     with right_column:
-        
-
-
+      st.write("###")
 st.write("[SaaSを見る >](https://share.streamlit.io/nf1177/saas/main/app.py)")
 st.write("[グラフを見る >](https://share.streamlit.io/nf1177/average_age/main/data_visualize.py)")
