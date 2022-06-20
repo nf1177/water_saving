@@ -58,6 +58,8 @@ with st.container():
             latest_iteration.text(f'節水率計算中：{i+1}%')
             bar.progress(i+1)
             time.sleep(0.02)
+    with left_column:
+      st.write("")
 
 
 with st.container():
