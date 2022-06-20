@@ -9,7 +9,7 @@ data = pd.read_csv("water_saving_chart.csv")
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="エコアクア：節水測定",
-                   page_icon=":potable_water:", layout="wide")
+                   page_icon=":potable_water:")
 
 # 画像読み込み
 
