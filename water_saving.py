@@ -81,6 +81,9 @@ with st.container():
         st.write("エコアクアの流水制御機構の比較動画です")
         url = 'https://www.youtube.com/watch?v=zifPZFwA1Hs'
         st.video(url)
+    with left_column:
+        st.title("工事中")
 
 
 st.write("[SaaSを見る >](https://share.streamlit.io/nf1177/saas/main/app.py)")
+st.write("[グラフを見る >](https://share.streamlit.io/nf1177/average_age/main/data_visualize.py)")
